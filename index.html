@@ -12,13 +12,46 @@
     <!-- Header - Inicio -->
     <header class="bg-black flex justify-around items-center h-[100px]">
 
-      <div class="max-lg:w-[180px]">
+      <div>
         <img src="src/assets/img/logo-mobile.svg" class="block sm:hidden" alt="Logo mobile">
         <img src="src/assets/img/Logo-provisória-branca 1.svg" class="hidden sm:block" alt="Logo Jornada Viagens">
       </div>
 
-      <nav>
+      <!--Navbar Desktop - Inicio -->
+      <nav class="max-sm:hidden">
         <ul class="text-white flex items-center justify-center gap-10">
+          <li class="font-montserra text-2xl max-lg:text-[18px]"><a href="#">Blog</a></li>
+          <li class="font-montserrat text-2xl max-lg:text-[18px]"><a href="#">Pacotes de Viagem</a></li>
+          <li class="font-montserrat text-2xl max-lg:text-[18px]"><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+      <!--Navbar Desktop - Fim -->
+
+      <!--Navbar Mobile - Inicio -->
+      <div class="sm:hidden">
+        <img class="block h-8 w-8 cursor-pointer" src="/src/assets/img/menu.svg" alt="Icone menu mobile" id="icon-abrir-mobile">
+
+        <svg 
+          id="icon-fechar-mobile"
+          xmlns="http://www.w3.org/2000/svg"  
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          class="text-white cursor-pointer h-8 w-8 hidden absolute z-20 right-7 top-5">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"
+        />
+        </svg>
+
+      </div>
+
+      <nav 
+        class="text-white h-full p-10 bg-neutral-900/60 hidden absolute z-10 top-0 right-0 sm:hidden" 
+        id="navbar-mobile"
+      >
+        <ul class="text-white mt-8 flex flex-col items-center justify-center gap-10">
           <li class="font-montserra text-2xl max-lg:text-[18px]"><a href="#">Blog</a></li>
           <li class="font-montserrat text-2xl max-lg:text-[18px]"><a href="#">Pacotes de Viagem</a></li>
           <li class="font-montserrat text-2xl max-lg:text-[18px]"><a href="#">Contato</a></li>
@@ -28,11 +61,78 @@
     <!-- Header - Fim -->
 
     <!-- Main - Inicio-->
-    <main class=>
+    <main class="w-full flex flex-col justify-center items-center">
 
-      <div>
+      <section>
         <img src="src/assets/img/banner.svg" alt="Banner viagens">
-      </div>
+      </section>
+
+      <p class="text-center font-montserrat text-2xl mt-30 w-[50%] m-auto max-md:w-[90%]">
+        Somos uma agência apaixonada por criar viagens inesquecíveis. Do destino à seleção das atividades, cuidamos de todos os detalhes para que você aproveite ao máximo cada momento da sua jornada!
+      </p>
+
+      <section class="mt-30 w-[80%]">
+        <h2 class="text-center text-2xl font-montserrat font-bold">Busque por Categoria</h2>
+        
+        <span class="inline-block ml-[39%] w-[23%] h-1 bg-red-600"></span>
+
+        <div class="mt-16 flex items-center justify-center gap-6 mr-4 ml-4 max-md:flex-wrap">
+
+          <div class="bg-gray-100 min-w-36 max-w-52 h-52 p-6 flex flex-col flex-1 items-center justify-center rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <img class="w-20 h-20" src="src/assets/img/icon-pessoa.svg" alt="Icone de Pessoa">
+
+            <h3 class="font-bold font-montserrat text-center text-xl mt-6">Pacotes Nacionais</h3>
+          </div>
+
+          <div class="bg-gray-100 min-w-36 max-w-52 h-52  p-6 flex flex-col flex-1 items-center justify-center rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <img class="w-20 h-20" src="src/assets/img/icon-aviao.svg" alt="Icone de Avião">
+
+            <h3 class="font-bold font-montserrat text-center text-xl mt-6">Pacotes Internacionais</h3>
+          </div>
+
+          <div class="bg-gray-100 min-w-36 h-52 max-w-52  p-6 flex flex-col flex-1 items-center justify-center rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <img class="w-20 h-20" src="src/assets/img/icon-onibus.svg" alt="Icone de Ônibus">
+
+            <h3 class="font-bold font-montserrat text-center text-xl mt-6">Transfer</h3>
+          </div>
+
+          <div class="bg-gray-100 min-w-36  max-w-52 h-52 p-6 flex flex-col flex-1 items-center justify-center rounded-lg transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <img class="w-20 h-20" src="src/assets/img/icone-seguro-viagem.svg" alt="Icone de Seguro viagem">
+
+            <h3 class="font-bold font-montserrat text-center text-xl mt-6">Seguro Viagem</h3>
+          </div>
+
+        </div>
+
+
+      </section>
+
+      <section class="mt-30 w-[80%]">
+        <h2 class="text-center text-2xl font-bold">Condições de Pagamento</h2>
+        
+        <span class="inline-block ml-[39%] w-[23%] h-1 bg-red-600"></span>
+
+        <div class="flex mt-16 gap-6">
+
+          <div>
+            <h2 class="text-center font-montserrat text-xl font-bold">Parcelamento em até 12x!</h2>
+
+            <p class="font-montserrat text-start text-base w-[40%] ml-[33%] mt-6">
+              Viaje pagando em até 12 parcelas no cartão, à vista no crédito com 5% de desconto ou no Pix com 10% de desconto! 
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div><img src="/src/assets/img/imagem1.svg" alt=""></div>
+            <div><img src="/src/assets/img/imagem2.svg" alt=""></div>
+            <div class="col-span-2"><img src="/src/assets/img/imagem3.svg" alt=""></div>
+          </div>
+
+        </div>
+
+      </section>
+
+
 
     </main>
     <!-- Main - Fim-->
